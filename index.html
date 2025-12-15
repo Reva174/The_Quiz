@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car & Bike Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- CATEGORY SCREEN -->
+    <div id="categoryScreen" class="card">
+      <h1>🔥 Car & Bike Quiz</h1>
+      <p class="subtitle">Choose your category and test your knowledge!</p>
+      <button class="category-btn" onclick="startGame('cars')">🚗 Supercars Quiz</button>
+      <button class="category-btn" onclick="startGame('bikes')">🏍️ Bikes Quiz</button>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div id="quizScreen" class="card hidden">
+      <h2 id="categoryTitle"></h2>
+      
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      
+      <div class="timer-container">
+        <span id="questionNumber"></span>
+        <span id="timer">⏱️ 10s</span>
+      </div>
+
+      <h3 id="question"></h3>
+      <div id="options"></div>
+    </div>
+
+    <!-- RESULT SCREEN -->
+    <div id="resultScreen" class="card hidden">
+      <div class="emoji-large" id="resultEmoji"></div>
+      <h2 id="scoreText"></h2>
+      <p class="score-message" id="scoreMessage"></p>
+      <button onclick="location.reload()">🔁 Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
